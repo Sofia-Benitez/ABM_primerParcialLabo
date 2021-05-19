@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1621433039 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\categoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"categoria.h"
+	"juegos.h"
+	"utn.h"
+
+1621432735 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\categoria.h
+
+1621361669 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\utn.h
+
+1621440033 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"utn.h"
+
+1621440003 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\cliente.h
+
+1621362685 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\utn.c
+	"utn.h"
+	<stddef.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1621380930 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\alquiler.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"alquiler.h"
+	"utn.h"
+	"juegos.h"
+
+1621437377 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\alquiler.h
+	"cliente.h"
+	"categoria.h"
+	"juegos.h"
+
+1621364938 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\juego.h
+	"categoria.h"
+
+1621440045 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"categoria.h"
+	"alquiler.h"
+	"juegos.h"
+	"utn.h"
+	"harcodeo.h"
+
+1621439659 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\juegos.h
+	"categoria.h"
+
+1621366491 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\juegos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"juegos.h"
+	"categoria.h"
+	"alquiler.h"
+	"utn.h"
+
+1621377069 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\harcodearclientes.h
+
+1621440105 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\harcodeo.h
+	"cliente.h"
+
+1621440132 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\benitezsofia.primerparciallabo1\benitez.sofia.pplabo1.1g\harcodeo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"harcodeo.h"
+
