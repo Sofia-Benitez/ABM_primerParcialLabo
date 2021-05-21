@@ -1,6 +1,7 @@
 #ifndef CLIENTE_H_INCLUDED
 #define CLIENTE_H_INCLUDED
 
+
 /*Cliente:
 • Código (autoincremental)
 • Nombre (máximo 51 caracteres) Validar
@@ -21,7 +22,6 @@ typedef struct{
 
 #endif // CLIENTE_H_INCLUDED
 
-
 /** \brief imprime el menu de opciones del ABM
  *
  * \param void
@@ -29,6 +29,15 @@ typedef struct{
  *
  */
 void menu(void);
+
+/** \brief imprime el menu de ABM de clientes
+ *
+ * \param void
+ * \return void
+ *
+ */
+void menuClientes(void);
+
 
 /** \brief asigna un 1 a todos los clientes indicando que estan vacios
  *
@@ -113,6 +122,7 @@ int modificarCliente(eCliente lista[], int tam);
  */
 int bajaCliente(eCliente lista[], int tam);
 
+
 /** \brief ordena los clientes segun distintos criterios
  *
  * \param lista[] eCliente
@@ -136,5 +146,13 @@ int ordenarClientes(eCliente lista[], int tam, int criterio);
 int cargarNombreCliente(int codigo, eCliente lista[], int tam, char nombre[]);
 
 
+/** \brief muestra los clientes que han pasado a tener isEmpty=1
+ *
+ * \param lista[] eCliente   array que recorre
+ * \param tam int            tamanio del array
+ * \return int              devuelve 1 si se realizo correctamente y 0 sino
+ *
+ */
+int mostrarClientesDeBaja(eCliente lista[], int tam);
 
 

@@ -25,6 +25,7 @@ typedef struct{
 
 #endif // ALQUILER_H_INCLUDED
 
+void menuAlquileres(void);
 
 /** \brief asigna un 1 en el campo isEmpty a todos los alquileres indicando que estan vacios
  *
@@ -119,3 +120,15 @@ int buscarAlquiler(eAlquileres alquileres[], int tamA, int codigoAlquiler);
  *
  */
 int bajaAlquiler(eAlquileres alquileres[], int tamA, eCliente lista[], int tam, eJuego juegos[], int tamJ, eCategoria categorias[], int tamCat);
+
+
+/** \brief da de baja alquileres de los clientes que han sido dados de baja. pregunta, muestra a los clientes dados de baja y si el usuario confirma los da de baja a los alquileres
+ *
+ * \param alquileres[] eAlquileres     array que recorre para dar de baja los alquileres
+ * \param tamA int                     tamanio del array
+ * \param lista[] eCliente             array de clientes para poder mostrar los dados de baja
+ * \param tam int                       tamanio del array
+ * \return int                          devuelve 1 si se ejecuto correctamente y 0 sino
+ *
+ */
+int bajaAlquilerDelCliente(eAlquileres alquileres[], int tamA, eCliente lista[], int tam);

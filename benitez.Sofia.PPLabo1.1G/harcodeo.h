@@ -2,6 +2,8 @@
 #define HARCODEO_H_INCLUDED
 
 #include "cliente.h"
+#include "alquiler.h"
+#include "juegos.h"
 
 
 #endif // HARCODEO_H_INCLUDED
@@ -17,3 +19,8 @@
  *
  */
 int harcodearClientes(eCliente lista[], int tam, int cant, int* pCodigo);
+
+
+int harcodearAlquileres(eAlquileres alquileres[], int tamA, int cant, int* pId);
+
+int harcodearJuegos(eJuego juegos[], int tamJ, int cant, int* pCodigo);

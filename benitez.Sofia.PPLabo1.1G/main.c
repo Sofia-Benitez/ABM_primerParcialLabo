@@ -7,45 +7,47 @@
 #include "alquiler.h"
 #include "juegos.h"
 #include "utn.h"
+#include "informes.h"
 #include "harcodeo.h"
 
 #define TAMC 1000
-#define TAMA 100
+#define TAMA 1000
 #define TAM_CAT 5
-#define TAMJ 10
+#define TAMJ 50
 
 int main()
 {
     int opcionMenuPrincipal;
+    int opcionInformes;
+    int opcionClientes;
+    int opcionAlquileres;
     char seguir = 's';
     int nextCodigo=100;//arranca de este valor
     int nextIdAlquiler=5000;
+    int nextCodigoJuego=1;
 
+    ///clientes
     eCliente clientes[TAMC];
 
-    //inicializar clientes
     inicializarClientes(clientes, TAMC);
 
     harcodearClientes(clientes, TAMC, 10, &nextCodigo);
 
+    ///alquileres
     eAlquileres alquileres[TAMA];
 
-    //inicializar alquileres
     inicializarAlquileres(alquileres, TAMA);
 
+    harcodearAlquileres(alquileres, TAMA, 10, &nextIdAlquiler);
 
-    eJuego juegos[TAMJ] = {
-        {1, "TEG", 1000, 502},
-        {2, "Ruleta", 2000, 501},
-        {3, "LIFE", 5000, 500},
-        {4, "varita", 600, 504},
-        {5, "pool", 8000, 503},
-        {6, "metegol", 8000, 503},
-        {7, "dados", 100, 500},
-        {8, "cartas", 200, 500},
-        {9, "kit de magia", 1000, 504},
-        {10, "pictionary", 2000, 500}
-        };
+    ///juegos
+
+    eJuego juegos[TAMJ];
+
+    inicializarJuegos(juegos, TAMJ);
+
+    harcodearJuegos(juegos, TAMJ, 10, &nextCodigoJuego);
+
 
     eCategoria categorias[TAM_CAT] = {
         {500, "Mesa"},
@@ -63,8 +65,13 @@ int main()
         utn_getNumero(&opcionMenuPrincipal, "Ingrese una opcion: ", "Error. Opcion invalida.\n", 1, 20, 3);
         switch(opcionMenuPrincipal)
         {
+        case 1:
+            ///clientes
+            menuClientes();
+            utn_getNumero(&opcionClientes, "Ingrese una opcion: ", "Error. Opcion invalida.\n", 1, 20, 3);
+            switch(opcionClientes)
+            {
             case 1:
-                //alta
                 if(altaCliente(clientes, TAMC, &nextCodigo))
                 {
                     printf("Alta exitosa\n");
@@ -76,14 +83,15 @@ int main()
                 break;
             case 2:
                 //baja
-                    if(bajaCliente(clientes, TAMC))
-                    {
-                        printf("Baja exitosa\n");
-                    }
-                    else
-                    {
-                        printf("Hubo un problema al dar de baja\n");
-                    }
+                if(bajaCliente(clientes, TAMC))
+                {
+                    printf("Baja exitosa\n");
+                    bajaAlquilerDelCliente(alquileres, TAMA, clientes, TAMC);
+                }
+                else
+                {
+                    printf("Hubo un problema al dar de baja\n");
+                }
                 break;
             case 3:
                 //modificacion
@@ -102,15 +110,28 @@ int main()
                 ordenarClientes(clientes, TAMC, 1);
                 mostrarClientes(clientes, TAMC);
                 break;
-            case 5:
+            }
+            break;
+        case 2:
+            ///alquileres
+            menuAlquileres();
+            utn_getNumero(&opcionAlquileres, "Ingrese una opcion: ", "Error. Opcion invalida.\n", 1, 20, 3);
+            switch(opcionAlquileres)
+            {
+            case 1:
                 ///nuevo alquiler
-                altaAlquiler(alquileres, TAMA, clientes, TAMC, categorias, TAM_CAT, juegos, TAMJ, &nextIdAlquiler);
+                if(altaAlquiler(alquileres, TAMA, clientes, TAMC, categorias, TAM_CAT, juegos, TAMJ, &nextIdAlquiler))
+                {
+                    printf("Alta exitosa\n");
+                }
+                else
+                {
+                    printf("Hubo un problema al dar de alta\n");
+                }
                 break;
-            case 6:
-                ///listar alquileres
-                mostrarAlquileres(alquileres, TAMA, clientes, TAMC, categorias, TAM_CAT, juegos, TAMJ);
-                break;
-            case 7:
+
+            case 2:
+                //baja alquiler
                 if(bajaAlquiler(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT))
                 {
                     printf("Cancelacion realizada con exito.\n");
@@ -120,13 +141,49 @@ int main()
                     printf("Hubo un problema al cancelar el alquiler\n");
                 }
                 break;
-            case 8:
-                mostrarJuegos(juegos, TAMJ, categorias, TAM_CAT);
-
+            case 3:
+                ///listar alquileres
+                mostrarAlquileres(alquileres, TAMA, clientes, TAMC, categorias, TAM_CAT, juegos, TAMJ);
                 break;
-            case 20:
+            }//fin alquileres
+            break;
+        case 3:
+            ///juegos
+            mostrarJuegos(juegos, TAMJ, categorias, TAM_CAT);
+
+            break;
+        case 4:
+            //informes
+            menuInformes();
+            utn_getNumero(&opcionInformes, "Ingrese una opcion: ", "Error\n", 1, 20, 3);
+            switch(opcionInformes)
+            {
+            case 1:
+                mostrarAlquileresPorCliente(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 2:
+                clientesMasAlquileres(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 3:
+                gastoCliente(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 4:
+                juegoMasAlquilado(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 5:
+                categoriaMasJuegos(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 6:
+                actualizarPrecioPorCategoria(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            case 7:
+                categoriaPreferidaCliente(alquileres, TAMA, clientes, TAMC, juegos, TAMJ, categorias, TAM_CAT);
+                break;
+            }
+            break;
+        case 10:
             seguir='n';
-            //salir, desea salir?
+
             break;
         }
 
@@ -136,7 +193,7 @@ int main()
 
         system("pause");
 
-        }
+    }
 
 
 

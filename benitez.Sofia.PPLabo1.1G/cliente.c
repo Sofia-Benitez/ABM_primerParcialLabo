@@ -5,28 +5,38 @@
 #include "cliente.h"
 #include "utn.h"
 
+
 //menu
 void menu(void)
 {
 
     system("cls");
 
-    printf("Clientes alquiler de juegos\n");
-    printf("1. Alta cliente\n");
-    printf("2. Baja cliente\n");
-    printf("3. Modificar cliente\n");
-    printf("4. Listar clientes\n");
-    printf("5. Nuevo Alquiler\n");
-    printf("6. Listar alquileres \n");
-    printf("7. Baja alquiler\n");
-    printf("8. Mostrar juegos\n");
-    printf("9. ----------- \n");
-    printf("10. --------\n");
-    printf("11. -------\n");
-    printf("20. Salir\n");
+    printf("Alquiler de juegos\n");
+    printf("1. CLIENTES\n");
+    printf("2. ALQUILERES\n");
+    printf("3. JUEGOS (mostrar) \n");
+    printf("4. INFORMES\n");
+    printf("5. --------\n");
+    printf("6. ---------- \n");
+    printf("10. Salir\n");
 
 
 
+}
+
+void menuClientes(void)
+{
+    system("cls");
+
+    printf("CLIENTES\n");
+    printf("1. Alta \n");
+    printf("2. Baja\n");
+    printf("3. Modificacion \n");
+    printf("4. Listar\n");
+    printf("5. --------\n");
+    printf("6. ---------- \n");
+    printf("10. Salir\n");
 }
 
 ///clientes
@@ -304,6 +314,7 @@ int bajaCliente(eCliente lista[], int tam)
         if(confirma=='s')
         {
             lista[indice].isEmpty=1;
+
             todoOk=1;
         }
         else
@@ -372,3 +383,32 @@ int cargarNombreCliente(int codigo, eCliente lista[], int tam, char nombre[])
 }
 
 
+int mostrarClientesDeBaja(eCliente lista[], int tam)
+{
+    int flag=1;
+    int todoOk=0;
+
+    if(lista!=NULL && tam>0)
+    {
+        printf("\n                                        ******Lista de clientes******\n");
+        printf("Codigo            Apellido                 Nombre                 Sexo                  Telefono \n");
+        printf("----------------------------------------------------------------------------------------------------------------\n");
+        for(int i=0; i<tam; i++)
+        {
+            if(lista[i].isEmpty==1 && lista[i].codigo>=100 && lista[i].codigo<=1100 && utn_esSoloLetras(lista[i].nombre) && (lista[i].sexo=='f' ||lista[i].sexo=='m'||lista[i].sexo=='o'))///muestra los que estan en el indice que estan ocupados
+            {
+                mostrarCliente(lista[i]);
+                flag=0;
+            }
+        }
+        if(flag)
+        {
+            printf("\n\n                                      No hay clientes en la lista\n");
+        }
+        printf("\n\n");
+        todoOk=1;
+    }
+
+
+    return todoOk;
+}

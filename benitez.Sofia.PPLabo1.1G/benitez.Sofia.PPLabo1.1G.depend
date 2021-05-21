@@ -79,3 +79,91 @@
 	<string.h>
 	"harcodeo.h"
 
+1621626259 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\alquiler.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"alquiler.h"
+	"cliente.h"
+	"utn.h"
+	"juegos.h"
+
+1621626322 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\cliente.h
+
+1621626076 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\alquiler.h
+	"cliente.h"
+	"categoria.h"
+	"juegos.h"
+
+1621432735 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\categoria.h
+
+1621558973 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\juegos.h
+	"categoria.h"
+
+1621361669 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\utn.h
+
+1621433039 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\categoria.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"categoria.h"
+	"juegos.h"
+	"utn.h"
+
+1621626076 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"utn.h"
+
+1621458670 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\harcodeo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"harcodeo.h"
+
+1621458549 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\harcodeo.h
+	"cliente.h"
+	"alquiler.h"
+	"juegos.h"
+
+1621559220 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\juegos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"juegos.h"
+	"categoria.h"
+	"alquiler.h"
+	"utn.h"
+
+1621626140 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+	"categoria.h"
+	"alquiler.h"
+	"juegos.h"
+	"utn.h"
+	"informes.h"
+	"harcodeo.h"
+
+1621362685 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\utn.c
+	"utn.h"
+	<stddef.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1621624479 source:c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"informes.h"
+	"alquiler.h"
+	"utn.h"
+
+1621612127 c:\users\sofia\onedrive\desktop\utn\laboratorio 1 - programacion 1\abm_primerparciallabo\benitez.sofia.pplabo1.1g\informes.h
+

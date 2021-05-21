@@ -14,6 +14,7 @@ typedef struct{
     char descripcion[20];
     float importe;
     int idCategoria;
+    int isEmpty;
 }eJuego;
 
 #endif // JUEGOS_H_INCLUDED
@@ -52,3 +53,11 @@ int mostrarJuegos(eJuego juegos[], int tamJ, eCategoria categorias[], int tamC);
  *
  */
 int cargarDescripcionJuegos(int codigo, eJuego juegos[], int tamJ, char descripcion[]);
+
+int inicializarJuegos(eJuego juegos[], int tamJ);
+
+int buscarLibreJuego(eJuego juegos[], int tamJ);
+
+int altaJuegos(eJuego juegos[], int tamJ, eCategoria categorias[], int tamCat, int*pCodigoJuego);
+
+int cargarImporteJuegos(int codigo, eJuego juegos[], int tamJ, float* importe);///puntero a descripcion para usarla en otra funcion
